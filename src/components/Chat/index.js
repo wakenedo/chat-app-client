@@ -12,7 +12,7 @@ const Chat = ({ location }) => {
     const ENDPOINT = 'localhost:5000'
 
     useEffect(() => {
-        const { name, room } = queryString.parse(location.search)
+        const { name, room } = queryString.parse(location)
 
         socket = io(ENDPOINT)
 
@@ -24,7 +24,7 @@ const Chat = ({ location }) => {
         })
 
         console.log(socket);
-    }, [ENDPOINT, location.search]);
+    }, [ENDPOINT, location]);
 
     return (
         <h1>Chat</h1>
