@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './style.css'
 
-const Join = () => {
+export default function  SignIn() {
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
 
@@ -24,5 +24,3 @@ const Join = () => {
         </div>
     )
 }
-
-export default Join
